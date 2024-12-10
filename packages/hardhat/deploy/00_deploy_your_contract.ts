@@ -1,44 +1,38 @@
-import { HardhatRuntimeEnvironment } from "hardhat/types";
+// Импорт типа DeployFunction из hardhat-deploy для декларации функции деплоя.
 import { DeployFunction } from "hardhat-deploy/types";
-import { Contract } from "ethers";
 
-/**
- * Deploys a contract named "YourContract" using the deployer account and
- * constructor arguments set to the deployer address
- *
- * @param hre HardhatRuntimeEnvironment object.
- */
-const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
-  /*
-    On localhost, the deployer account is the one that comes with Hardhat, which is already funded.
+// Импорт среды выполнения Hardhat (HRE), которая предоставляет доступ к утилитам и контексту выполнения.
+import { HardhatRuntimeEnvironment } from "hardhat/types";
 
-    When deploying to live networks (e.g `yarn deploy --network sepolia`), the deployer account
-    should have sufficient balance to pay for the gas fees for contract creation.
+// Определение функции деплоя контракта Voting.
+// Тип DeployFunction используется для обеспечения совместимости с hardhat-deploy.
+const deployVoting: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+  // Деструктуризация объектов deployments и getNamedAccounts из среды выполнения Hardhat.
+  // deployments содержит утилиты для развертывания контрактов.
+  // getNamedAccounts позволяет получить заранее определённые аккаунты.
+  const { deployments, getNamedAccounts } = hre;
 
-    You can generate a random account with `yarn generate` which will fill DEPLOYER_PRIVATE_KEY
-    with a random private key in the .env file (then used on hardhat.config.ts)
-    You can run the `yarn account` command to check your balance in every network.
-  */
-  const { deployer } = await hre.getNamedAccounts();
-  const { deploy } = hre.deployments;
+  // Извлечение функции deploy из объекта deployments.
+  const { deploy } = deployments;
 
-  await deploy("YourContract", {
+  // Получение аккаунта деплойера (откуда будет развернут контракт).
+  const { deployer } = await getNamedAccounts();
+
+  // Развертывание контракта Voting.
+  // Аргументы:
+  // - from: адрес аккаунта, который будет использоваться для деплоя.
+  // - args: массив аргументов для конструктора контракта (здесь пустой, т.к. конструктор без параметров).
+  // - log: если true, Hardhat будет выводить информацию о деплое в консоль.
+  await deploy("Voting", {
     from: deployer,
-    // Contract constructor arguments
-    args: [deployer],
-    log: true,
-    // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
-    // automatically mining the contract deployment transaction. There is no effect on live networks.
-    autoMine: true,
+    args: [], // Контракт не требует параметров конструктора.
+    log: true, // Логирование процесса деплоя.
   });
-
-  // Get the deployed contract to interact with it after deploying.
-  const yourContract = await hre.ethers.getContract<Contract>("YourContract", deployer);
-  console.log("👋 Initial greeting:", await yourContract.greeting());
 };
 
-export default deployYourContract;
+// Экспорт функции деплоя для использования в сценариях Hardhat.
+export default deployVoting;
 
-// Tags are useful if you have multiple deploy files and only want to run one of them.
-// e.g. yarn deploy --tags YourContract
-deployYourContract.tags = ["YourContract"];
+// Тег функции деплоя, позволяющий запускать её из командной строки с указанием этого тега.
+// Например: `npx hardhat deploy --tags Voting`
+deployVoting.tags = ["Voting"];

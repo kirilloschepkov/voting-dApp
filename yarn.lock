@@ -1698,9 +1698,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nomicfoundation/hardhat-chai-matchers@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "@nomicfoundation/hardhat-chai-matchers@npm:2.0.7"
+"@nomicfoundation/hardhat-chai-matchers@npm:^2.0.8":
+  version: 2.0.8
+  resolution: "@nomicfoundation/hardhat-chai-matchers@npm:2.0.8"
   dependencies:
     "@types/chai-as-promised": ^7.1.3
     chai-as-promised: ^7.1.1
@@ -1711,7 +1711,7 @@ __metadata:
     chai: ^4.2.0
     ethers: ^6.1.0
     hardhat: ^2.9.4
-  checksum: 7162187522d441cd06643d926fa06b36bdea9029cbd7b9d735a2642dd343e6f9d93ea7a01d3d2efe06d9696c0035911d299574014a27d2c8521ab2387cfc83f8
+  checksum: bcf2efcf98e1e889e4566b3ff23099313c67a4c765367f702672890e0d3e6f38ad8de415ee6e9f65d038f6dcd879cc080ca0dda07109acc7d3fc249e8fdb79f5
   languageName: node
   linkType: hard
 
@@ -1876,10 +1876,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@openzeppelin/contracts@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "@openzeppelin/contracts@npm:5.0.2"
-  checksum: 0cce6fc284bd1d89e2a447027832a62f1356b44ee31088899453e10349a63a62df2f07da63d76e4c41aad9c86b96b650b2b6fc85439ef276850dda1170a047fd
+"@openzeppelin/contracts@npm:4.9.3":
+  version: 4.9.3
+  resolution: "@openzeppelin/contracts@npm:4.9.3"
+  checksum: 4932063e733b35fa7669b9fe2053f69b062366c5c208b0c6cfa1ac451712100c78acff98120c3a4b88d94154c802be05d160d71f37e7d74cadbe150964458838
   languageName: node
   linkType: hard
 
@@ -2264,11 +2264,11 @@ __metadata:
   dependencies:
     "@ethersproject/abi": ^5.7.0
     "@ethersproject/providers": ^5.7.2
-    "@nomicfoundation/hardhat-chai-matchers": ^2.0.7
+    "@nomicfoundation/hardhat-chai-matchers": ^2.0.8
     "@nomicfoundation/hardhat-ethers": ^3.0.8
     "@nomicfoundation/hardhat-network-helpers": ^1.0.11
     "@nomicfoundation/hardhat-verify": ^2.0.10
-    "@openzeppelin/contracts": ^5.0.2
+    "@openzeppelin/contracts": 4.9.3
     "@typechain/ethers-v5": ^11.1.2
     "@typechain/ethers-v6": ^0.5.1
     "@typechain/hardhat": ^9.1.0
@@ -2278,13 +2278,13 @@ __metadata:
     "@types/qrcode": ^1.5.5
     "@typescript-eslint/eslint-plugin": ^8.8.1
     "@typescript-eslint/parser": ^8.8.1
-    chai: ^4.5.0
+    chai: 4.3.7
     dotenv: ^16.4.5
     envfile: ^7.1.0
     eslint: ^8.57.1
     eslint-config-prettier: ^8.10.0
     eslint-plugin-prettier: ^5.2.1
-    ethers: ^6.13.2
+    ethers: ^6.13.4
     hardhat: ^2.22.10
     hardhat-deploy: ^0.12.4
     hardhat-deploy-ethers: ^0.4.2
@@ -2893,10 +2893,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.15.13":
-  version: 18.15.13
-  resolution: "@types/node@npm:18.15.13"
-  checksum: 79cc5a2b5f98e8973061a4260a781425efd39161a0e117a69cd089603964816c1a14025e1387b4590c8e82d05133b7b4154fa53a7dffb3877890a66145e76515
+"@types/node@npm:22.7.5":
+  version: 22.7.5
+  resolution: "@types/node@npm:22.7.5"
+  dependencies:
+    undici-types: ~6.19.2
+  checksum: 1a8bbb504efaffcef7b8491074a428e5c0b5425b0c0ffb13e7262cb8462c275e8cc5eaf90a38d8fbf52a1eeda7c01ab3b940673c43fc2414140779c973e40ec6
   languageName: node
   linkType: hard
 
@@ -4892,18 +4894,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chai@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "chai@npm:4.5.0"
+"chai@npm:4.3.7":
+  version: 4.3.7
+  resolution: "chai@npm:4.3.7"
   dependencies:
     assertion-error: ^1.1.0
-    check-error: ^1.0.3
-    deep-eql: ^4.1.3
-    get-func-name: ^2.0.2
-    loupe: ^2.3.6
+    check-error: ^1.0.2
+    deep-eql: ^4.1.2
+    get-func-name: ^2.0.0
+    loupe: ^2.3.1
     pathval: ^1.1.1
-    type-detect: ^4.1.0
-  checksum: 70e5a8418a39e577e66a441cc0ce4f71fd551a650a71de30dd4e3e31e75ed1f5aa7119cf4baf4a2cb5e85c0c6befdb4d8a05811fad8738c1a6f3aa6a23803821
+    type-detect: ^4.0.5
+  checksum: 0bba7d267848015246a66995f044ce3f0ebc35e530da3cbdf171db744e14cbe301ab913a8d07caf7952b430257ccbb1a4a983c570a7c5748dc537897e5131f7c
   languageName: node
   linkType: hard
 
@@ -4942,7 +4944,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"check-error@npm:^1.0.2, check-error@npm:^1.0.3":
+"check-error@npm:^1.0.2":
   version: 1.0.3
   resolution: "check-error@npm:1.0.3"
   dependencies:
@@ -5566,7 +5568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deep-eql@npm:^4.1.3":
+"deep-eql@npm:^4.1.2":
   version: 4.1.4
   resolution: "deep-eql@npm:4.1.4"
   dependencies:
@@ -6902,18 +6904,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethers@npm:^6.13.2":
-  version: 6.13.2
-  resolution: "ethers@npm:6.13.2"
+"ethers@npm:^6.13.4":
+  version: 6.13.4
+  resolution: "ethers@npm:6.13.4"
   dependencies:
     "@adraffy/ens-normalize": 1.10.1
     "@noble/curves": 1.2.0
     "@noble/hashes": 1.3.2
-    "@types/node": 18.15.13
+    "@types/node": 22.7.5
     aes-js: 4.0.0-beta.5
-    tslib: 2.4.0
+    tslib: 2.7.0
     ws: 8.17.1
-  checksum: 981860c736c7ae121774ad38ea07e3611ce524a77d2fcb77db499b65afe0cbe8f344cd5204d94b68b316349ff770fd2a7d9c8b2039da41c072f98d9864099925
+  checksum: a64ad0f05ed7f79bf3092cd54ac11c3ed4a0a3fe8ee00a81053b5b4a34d84728c12fa5aa9bf3e2cc5efabbf1a0a37f62cd3a1852cf780a1ab619421fa03c2713
   languageName: node
   linkType: hard
 
@@ -7520,7 +7522,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-func-name@npm:^2.0.1, get-func-name@npm:^2.0.2":
+"get-func-name@npm:^2.0.0, get-func-name@npm:^2.0.1, get-func-name@npm:^2.0.2":
   version: 2.0.2
   resolution: "get-func-name@npm:2.0.2"
   checksum: 3f62f4c23647de9d46e6f76d2b3eafe58933a9b3830c60669e4180d6c601ce1b4aa310ba8366143f55e52b139f992087a9f0647274e8745621fa2af7e0acf13b
@@ -9350,7 +9352,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loupe@npm:^2.3.6":
+"loupe@npm:^2.3.1":
   version: 2.3.7
   resolution: "loupe@npm:2.3.7"
   dependencies:
@@ -13051,10 +13053,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.4.0":
-  version: 2.4.0
-  resolution: "tslib@npm:2.4.0"
-  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+"tslib@npm:2.7.0, tslib@npm:^2.6.2":
+  version: 2.7.0
+  resolution: "tslib@npm:2.7.0"
+  checksum: 1606d5c89f88d466889def78653f3aab0f88692e80bb2066d090ca6112ae250ec1cfa9dbfaab0d17b60da15a4186e8ec4d893801c67896b277c17374e36e1d28
   languageName: node
   linkType: hard
 
@@ -13062,13 +13064,6 @@ __metadata:
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.6.2":
-  version: 2.7.0
-  resolution: "tslib@npm:2.7.0"
-  checksum: 1606d5c89f88d466889def78653f3aab0f88692e80bb2066d090ca6112ae250ec1cfa9dbfaab0d17b60da15a4186e8ec4d893801c67896b277c17374e36e1d28
   languageName: node
   linkType: hard
 
@@ -13118,7 +13113,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-detect@npm:^4.1.0":
+"type-detect@npm:^4.0.5":
   version: 4.1.0
   resolution: "type-detect@npm:4.1.0"
   checksum: 3b32f873cd02bc7001b00a61502b7ddc4b49278aabe68d652f732e1b5d768c072de0bc734b427abf59d0520a5f19a2e07309ab921ef02018fa1cb4af155cdb37
@@ -13347,6 +13342,13 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 3192ef6f3fd5df652f2dc1cd782b49d6ff14dc98e5dced492aa8a8c65425227da5da6aafe22523c67f035a272c599bb89cfe803c1db6311e44bed3042fc25487
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.19.2":
+  version: 6.19.8
+  resolution: "undici-types@npm:6.19.8"
+  checksum: de51f1b447d22571cf155dfe14ff6d12c5bdaec237c765085b439c38ca8518fc360e88c70f99469162bf2e14188a7b0bcb06e1ed2dc031042b984b0bb9544017
   languageName: node
   linkType: hard
 
