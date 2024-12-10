@@ -30,7 +30,9 @@ describe("Voting", function () {
   });
 
   it("Должен запрещать добавление кандидатов не владельцем", async function () {
-    await expect(votingContract.connect(addr1).addCandidate("Alice")).to.be.revertedWith("Ownable: caller is not the owner");
+    await expect(votingContract.connect(addr1).addCandidate("Alice")).to.be.revertedWith(
+      "Ownable: caller is not the owner",
+    );
   });
 
   it("Должен позволять начать голосование только владельцу", async function () {
@@ -38,7 +40,7 @@ describe("Voting", function () {
     await votingContract.startVoting(3600); // Длительность 1 час
 
     const votingStatus = await votingContract.votingStatus();
-    expect(votingStatus).to.equal(1); // Status: Ongoing
+    expect(votingStatus).to.equal(1); // Status: InProgress
   });
 
   it("Должен запрещать голосовать до начала голосования", async function () {
