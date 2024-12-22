@@ -77,7 +77,8 @@ contract Voting is Ownable {
     }
 
     // Функция завершения голосования (только владелец, во время голосования)
-    function endVoting() external onlyOwner onlyDuringVoting {
+    function endVoting() external onlyOwner {
+        require(votingStatus == VotingStatus.InProcess, "Voting has not started yet or has already ended.");
         votingStatus = VotingStatus.Ended; // Устанавливаем статус голосования "Завершено"
 
         emit VotingEnded(block.timestamp); // Генерируем событие о завершении голосования
